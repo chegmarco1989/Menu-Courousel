@@ -105,19 +105,24 @@
   </div>
 </nav>
   
-  <!-- EXAMPLE 1:  -->
+<!-- EXAMPLE 1:  -->
 <script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function() {
-	var menu = document.querySelector(".menu-inner-box"); 
-	var prev = document.getElementById("btn-menu-nav-previous"); 
-	var next = document.getElementById("btn-menu-nav-next");
-	prev.addEventListener("click", function() {
-		menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft - 100}], {duration: 500, fill: "forwards"});
-	});
-	next.addEventListener("click", function() {
-		menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft + 100}], {duration: 500, fill: "forwards"});
-	});
-});
+<script>
+	// Put your code inside this function
+	function myFunction() {
+	// Your code here
+		var menu = document.querySelector(".menu-inner-box"); 
+		var prev = document.getElementById("btn-menu-nav-previous"); 
+		var next = document.getElementById("btn-menu-nav-next");
+		prev.addEventListener("click", function() {
+			menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft - 100}], {duration: 500, fill: "forwards"});
+		});
+		next.addEventListener("click", function() {
+			menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft + 100}], {duration: 500, fill: "forwards"});
+		});
+	}
+	// Add an event listener that runs your function when the document is ready
+	document.addEventListener("DOMContentLoaded", myFunction);
 </script>
 </body>
 </html>
