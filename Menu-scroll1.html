@@ -4,21 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Menu</title>
-  
-  <!-- EXAMPLE 1:  -->
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function() {
-	var menu = document.querySelector(".menu-inner-box"); 
-	var prev = document.getElementById("btn-menu-nav-previous"); 
-	var next = document.getElementById("btn-menu-nav-next");
-	prev.addEventListener("click", function() {
-		menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft - 100}], {duration: 500, fill: "forwards"});
-	});
-	next.addEventListener("click", function() {
-		menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft + 100}], {duration: 500, fill: "forwards"});
-	});
-});
-</script>
 
   <style>
 	  nav#menu-container {
@@ -119,5 +104,20 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
   </div>
 </nav>
+  
+  <!-- EXAMPLE 1:  -->
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+	var menu = document.querySelector(".menu-inner-box"); 
+	var prev = document.getElementById("btn-menu-nav-previous"); 
+	var next = document.getElementById("btn-menu-nav-next");
+	prev.addEventListener("click", function() {
+		menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft - 100}], {duration: 500, fill: "forwards"});
+	});
+	next.addEventListener("click", function() {
+		menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft + 100}], {duration: 500, fill: "forwards"});
+	});
+});
+</script>
 </body>
 </html>
