@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu</title>
+  
+  <!-- EXAMPLE 1:  -->
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+	var menu = document.querySelector(".menu-inner-box"); 
+	var prev = document.getElementById("btn-menu-nav-previous"); 
+	var next = document.getElementById("btn-menu-nav-next");
+	prev.addEventListener("click", function() {
+		menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft - 100}], {duration: 500, fill: "forwards"});
+	});
+	next.addEventListener("click", function() {
+		menu.animate([{scrollLeft: menu.scrollLeft}, {scrollLeft: menu.scrollLeft + 100}], {duration: 500, fill: "forwards"});
+	});
+});
+</script>
+
+  <style>
+	  nav#menu-container {
+		background:#586e75;
+		position:relative;
+		width:50%;
+		height: 56px;
+	}
+	#btn-menu-nav-previous {
+		text-align: center;
+		color: white;
+		cursor: pointer;
+		font-size: 24px;
+		position: absolute;
+		left: 0px;
+		padding: 9px 12px;
+		background: #8f9a9d;
+		fill:#FFF;
+	}
+	#btn-menu-nav-next {
+		text-align: center;
+		color: white;
+		cursor: pointer;
+		font-size: 24px;
+		position: absolute;
+		right: 0px;
+		padding: 9px 12px;
+		background: #8f9a9d;
+		fill:#FFF;
+	}
+	.menu-inner-box
+	{ 
+		width: 100%;
+		white-space: nowrap;
+		margin: 0 auto;
+		overflow: hidden;
+		padding: 0px 54px;
+		box-sizing: border-box;
+	}
+	.menu
+	{  
+		padding:0;
+		margin: 0;
+		list-style-type: none;
+		display:block;
+		text-align: center;
+	}
+	.menu-item
+	{
+		height:100%;
+		padding: 0px 25px;
+		color:#fff;
+		display:inline;
+		margin:0 auto;
+		line-height:57px;
+		text-decoration:none;
+		text-align:center;
+		white-space:no-wrap;
+	}
+	.menu-item:hover {
+		text-decoration:underline;
+	}
+	.last-item{
+	  margin-right: 50px;
+	}
+  </style>
+  
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<nav id="menu-container" class="arrow">
+  <div id="btn-menu-nav-previous" style="fill: #FFF">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+      <path d="M0 0h24v24H0z" fill="none" />
+    </svg>
+  </div>
+  <div id="btn-menu-nav-next">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            viewBox="0 0 24 24">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+      <path d="M0 0h24v24H0z" fill="none" />
+    </svg>
+  </div>
+  <div class="menu-inner-box">
+    <div class="menu">
+      <a class="menu-item" href="#">Menu 1</a>
+      <a class="menu-item" href="#">Menu 2</a>
+      <a class="menu-item" href="#">Menu 3</a>
+      <a class="menu-item" href="#">Menu 4</a>
+      <a class="menu-item" href="#">Menu 5</a>
+      <a class="menu-item" href="#">Menu 6</a>
+      <a class="menu-item" href="#">Menu 7</a>
+      <a class="menu-item" href="#">Menu 8</a>
+      <a class="menu-item" href="#">Menu 9</a>
+      <a class="menu-item" href="#">Menu 10</a>
+      <a class="menu-item last-item" href="#">Menu 11</a>
+    </div>
+  </div>
+</nav>
+</body>
+</html>
